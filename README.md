@@ -28,7 +28,7 @@ Data Table Display Tips
 To display a responsive table with data, wrap the table with a
 div with a class of "responsive-table" Below is an example, to provide more context:
 
-<pre>
+<code>
 <div class="responsive-table">
 <table>
   <tr>
@@ -68,7 +68,7 @@ div with a class of "responsive-table" Below is an example, to provide more cont
   </tr>
 </table>
 </div>
-</pre>
+</code>
 
 
 
