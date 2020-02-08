@@ -1,0 +1,892 @@
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Mono
+~~~~~~~~~~
+A free WordPress theme featuring monospace font stack.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,500,500i,700,700i&display=swap');
+
+body, html, code, pre {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace !important;
+    background: lightcyan;
+}
+
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Typography
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+a, a:link, a:visited {
+    /* color: #333333; */
+    /* color: #551A8B; */
+    transition: .4s;
+}
+
+a:hover {
+    cursor: pointer !important;
+    background: url(../tiles/zebra-cyan3.png) repeat;
+}
+
+::selection {
+    color: #000000;
+    background: #00FFFF !important;
+}
+
+moz-::selection {
+    color: #000000;
+    background: #00FFFF !important;
+}
+
+h1.site-title-class, .site-title-class {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+h1 a, h1 a:link, h1 a:visited {
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    line-height: normal;
+    font-style: italic;
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+}
+
+h1 a:hover {
+    font-style: italic;
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+}
+
+h1, h2, h3, h4, h5 {
+    font-size: 1em;
+    color: #333333;
+}
+
+h4, h5, h6 {
+    font-weight: 400;
+}
+
+.header-child-container h1 a, .header-child-contaner h1 {
+    font-style: normal;
+}
+
+.entry-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+h5 {
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+    text-decoration-color: #333333;
+}
+
+h6 {
+    text-transform: uppercase;
+    color: #333333;
+    font-size: 0.8em;
+}
+
+h2.entry-title a {
+    font-weight: 400;
+    word-break: break-all;
+}
+
+p, .entry-content p {
+    width: 100%;
+    max-width: 650px;
+    font-size: 1em;
+    line-height: normal;
+    color: #333333;
+}
+
+.entry-meta {
+    font-size: 0.8rem;
+    line-height: normal;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+pre {
+    width: 50%;
+    color: blue;
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace !important;
+    background: lightcyan;
+    border: 1px solid blue;
+    font-size: 0.8em;
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+code {
+    font-family: 'IBM Plex Mono', monospace !important;
+    background: lightgray;
+    display: block;
+    font-size: 0.8em;
+    margin-left: auto;
+    border-radius: 4px;
+    padding: 0px 2px;
+    color: blue;
+    display: inline;
+}
+
+ul li code {
+    width: 50%;
+    margin: inherit 0rem;
+    margin-left: 0rem;
+}
+
+figcaption {
+    font-size: 0.8rem;
+}
+
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Structure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+#container {
+    margin-top: 0.8rem;
+}
+
+main#content {
+    height: auto;
+    min-height: 400px;
+}
+
+.main-wrapper {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-container {
+    margin: 0px;
+    padding: 0px;
+    background: transparent;
+    width: 90%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+header, main {
+    width: 100%;
+}
+
+.header-wrapper {
+    width: 90%;
+    height: auto;
+    min-height: 7rem;
+    z-index: 101 !important;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: lightcyan;
+    border-bottom: 1px solid #333333;
+    position: fixed !important;
+    max-width: 1440px;
+    top: 0px;
+}
+
+.header-class {
+    background: transparent;
+    height: auto;
+    min-height: 7rem;
+    overflow-y: visible;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: unset;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: row-reverse; */
+}
+
+.header-class div {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+}
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+.menu-link {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0px;
+    padding: 0px;
+    background: #FFF;
+    color: #333333;
+    display: inline-block;
+    width: auto;
+    margin: 0px;
+    padding: 2px 10px;
+    border-radius: 6px; 
+    text-align: center;
+    letter-spacing: 1px;
+    transition: .8s;
+}
+
+.menu-link:hover {
+    cursor: pointer !important;
+}
+
+.menu-link:active {
+    background: #00FFFF;
+}
+
+.top-nav-class {
+    background: transparent;
+    height: auto;
+    display: flex;
+    width: 100%;
+    display: none;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 0.7rem;
+}
+
+.top-nav-class a {
+    display: inline-block;
+    padding: 0.6rem 0rem;
+    width: 100%;
+    font-size: 1.0em;
+}
+
+#menu {
+    position: fixed !important;
+    z-index: 100 !important;
+    background: lightcyan;
+    top: 7rem !important;
+    width: 90%;
+    max-width: 1440px !important;
+}
+
+.section-class-flex, section.section-class-flex {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.flex-one, .flex-two {
+    width: 45.3%;
+}
+
+.flex-one, .flex-two {
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden !important;
+    padding: 0px;
+    margin: 0px;
+}
+
+.full-width-menu {
+    width: 100%;
+    margin-top: 7rem;
+    margin-bottom: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+#menu ul.menu li:nth-of-type(n+1):nth-of-type(-n+5) {
+    color: blue;
+}
+
+#menu ul.menu li:nth-of-type(n+6):nth-of-type(-n+10) {
+    color: red;
+}
+
+#menu ul.menu li:nth-of-type(n+11):nth-of-type(-n+16) {
+    color: #FFFF00;
+}
+
+#menu ul.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 0.8rem;
+}
+
+#menu ul.menu li {
+    display: inline-block;
+    width: 25%;
+}
+
+#menu ul.menu li a {
+    width: 80%;
+    font-size: 0.9em;
+    line-height: normal;
+}
+
+ol {
+    width: 80%;
+    max-width: 525px;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 0px;
+    margin-left: 40px;
+}
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Classes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+.lavender {
+    background: lavender;
+}
+
+.lavenderblush {
+    background: lavenderblush;
+}
+
+.lightyellow {
+    background: lightyellow;
+}
+
+.peachpuff {
+    background: peachpuff;
+}
+
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Comments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+#comments {
+    margin: 1.2rem 0rem;
+    border-top: 1px solid #333;
+    padding: 1.2rem 0rem;
+}
+
+.comments-title {
+    margin-bottom: 1.2rem;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+}
+
+.comment {
+    border-bottom: 1px dotted #333;
+    margin: 1.2rem 0rem;
+    padding-bottom: 1.2rem;
+    font-size: 1em;
+}
+
+#comments, textarea {
+    width: 100%;
+    max-width: 100%;
+}
+
+.comment-body {
+    font-size: 0.9em;
+}
+
+li.comment {
+    list-style-type: none;
+}
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Archives
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+.archives-header-container {
+    width: 100%;
+    height: auto;
+    text-align: left;
+}
+
+.archives-flex-container {
+    width: 100%;
+    display: flex;
+    background: transparent;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.archives-flex-container div {
+    width: 30%;
+    height: auto;
+    background: transparent;
+    text-align: center;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 1.0rem 0rem;
+    text-align: left;
+}
+
+.archives-flex-container div .responsive-image {
+    margin: 0rem;
+}
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+th {
+    border: 1px solid #333;
+    background: lavenderblush;
+    font-weight: 400;
+    border-bottom: none;
+}
+td {
+    border: 1px solid #333;
+}
+
+table {
+    margin: 2rem 0rem;
+    border-collapse: collapse;
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 0.75em;
+    border-spacing: 0;
+    width: 100%;
+	width: auto;
+    max-width: 100%;
+    border: 1px solid #333;
+    overflow-x: scroll;
+  }
+
+  
+th, td {
+    text-align: left;
+    padding: 4px;
+    transition: 0.7s;
+  }
+
+  
+tr:nth-child(even){
+    background: url(../tiles/zebra-cyan3.png) repeat;
+}
+
+tr {
+    transition: 0.7s;
+}
+
+tr:hover {
+    background: url(../tiles/zebra-lavenderblush.png) repeat;
+}
+
+.responsive-table {
+    overflow-x: auto;
+}
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Meta Data 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+.edit-post-container {
+    display: block;
+}
+
+.post-edit-link {
+    font-size: 0.8em;
+    letter-spacing: 1px;
+}
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sidebar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+.flex-child h2 {
+    margin: 0.8rem 0rem;
+    line-height: normal;
+}
+
+#sidebar {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 5.5rem;
+    margin-top: 5.5rem;
+}
+
+.xoxo {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: 0px !important;
+}
+
+ul.xoxo li {
+    display: inline-block;
+}
+
+ul.xoxo li ul {
+    padding-left: 0px !important;
+}
+
+ul.xoxo li ul li {
+    display: inline-block;
+    width: 100%;
+    border: none;
+}
+
+.widget-container {
+    width: 15%;
+}
+
+.widget-title {
+    border-bottom: 1px solid #333333;
+}
+
+.widget-container p {
+    font-size: 0.9em;
+}
+
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+#footer {
+    position: fixed !important;
+    width: 100%;
+    min-height: 40px;
+    height: auto;
+    background: lightcyan;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 100 !important;
+    left: 0px !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    font-size: .8em;
+}
+
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Images & Media & WP Elements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+.responsive-image {
+    display: block;
+    margin: 2.5rem 0rem;
+    width: auto !important;
+    max-width: 100%;
+    height: auto;
+}
+
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+    width: auto;
+    height: auto;
+    margin: 1.2rem auto;
+    max-width: 662px;
+}
+
+.wp-block-embed__wrapper, iframe {
+    width: 100%;
+    max-width: 100%;
+}
+
+.wp-block-button__link {
+    background-color: #32373c;
+    border: none;
+    border-radius: 28px;
+    box-shadow: none;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0.4rem 0rem;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+.entry-footer {
+    width: 25%;
+    font-size: 0.8rem;
+    margin: 1rem 0rem;
+}
+
+.tag-links, .cat-links {
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1.2rem 0rem;
+    margin: 1.2rem 0rem;
+    width: 50%;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.navigation h2 {
+    font-weight: 400;
+    text-decoration: underline;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 0.4rem;
+    text-transform: capitalize;
+}
+
+.wp-caption-text {
+    font-size: 0.8rem;
+}
+
+.wp-block-quote {
+    width: 35%;
+}
+
+.admin-bar .full-width-menu {
+    margin-top: 5rem;
+}
+
+.admin-bar .full-width-menu {
+    margin-top: 5rem;
+}
+
+input.search-field, input[type="submit"], textarea, input {
+    background: transparent;
+    border-color: #333333;
+    padding: 0.8em;
+    font-family: 'IBM Plex Mono', monospace !important;
+    border-width: 1px;
+    margin-bottom: .1rem;
+    color: blue;
+}
+
+input[type="submit"] {
+    color: #333333;
+}
+
+form label {
+    font-size: 0.8em;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer !important;
+}
+
+p.logged-in-as {
+    font-size: 0.8em;
+}
+
+.widget-container li {
+    font-size: 0.9em;
+}
+
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Responsive
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+@media(max-width: 768px) {
+
+    body, html {
+        background: lightcyan;
+        background-image: none;
+    }
+
+    .section-class-flex, section.section-class-flex {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .section-class-flex div {
+        width: 100%;
+    }
+
+    .flex-one, .flex-two {
+        height: auto;
+    }
+
+    .main-wrapper {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main-container {
+        margin: 0px;
+        padding: 0px;
+        width: 90%;
+        max-width: unset;
+    }
+
+    .header-wrapper {
+        width: 90%;
+        height: auto;
+        min-height: 7.0rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-class {
+        background: transparent;
+        height: auto;
+        overflow-y: visible;
+        overflow-x: hidden;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+
+    .header-class div {
+        width: auto;
+        flex-basis: unset;
+    } 
+
+    .full-width-menu {
+        width: 100%;
+        margin-top: 7rem;
+        margin-bottom: 1rem;
+    }
+
+    #menu ul.menu li {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .xoxo {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .widget-container {
+        width: 100%;
+        margin: 1.2rem auto;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        padding: 1.2rem 0rem;
+        margin: 4rem auto;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background: transparent;
+        width: 100%;
+    }
+
+    .entry-footer {
+        width: 90%;
+    }
+
+    .wp-block-quote {
+        width: 75%;
+    }
+
+    .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+        width: 100%;
+    }
+
+    #menu ul.menu li a {
+        font-size: 1rem;
+    }
+
+    main#content {
+        height: auto;
+        min-height: unset;
+    }
+
+    table {
+        font-size: 0.7em;
+    }
+    
+
+}
