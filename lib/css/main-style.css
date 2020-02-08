@@ -24,8 +24,7 @@ Typography
 */
 
 a, a:link, a:visited {
-    /* color: #333333; */
-    /* color: #551A8B; */
+    color: #0000EE;
     transition: .4s;
 }
 
@@ -628,6 +627,12 @@ Footer
 Images & Media & WP Elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
+
+img, .wp-block-image img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
 
 .responsive-image {
     display: block;
