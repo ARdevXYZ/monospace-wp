@@ -138,7 +138,7 @@ pre {
     color: blue;
     font-size: 16px;
     font-family: 'IBM Plex Mono', monospace !important;
-    background: lightcyan;
+    background: url(../tiles/zebra-cyan3.png) repeat;
     border: 1px solid blue;
     font-size: 0.8em;
     padding: 2rem;
@@ -515,7 +515,7 @@ th, td {
 
   
 tr:nth-child(even){
-    background: url(../tiles/zebra-cyan3.png) repeat;
+    background: url(../tiles/zebra-cyan.png) repeat;
 }
 
 tr {
@@ -886,6 +886,20 @@ Responsive
 
     table {
         font-size: 0.7em;
+    }
+
+    pre {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        color: blue;
+        font-size: 16px;
+        font-family: 'IBM Plex Mono', monospace !important;
+        background: url(../tiles/zebra-cyan.png) repeat;
+        border: 1px solid blue;
+        font-size: 0.8em;
+        padding: 2rem;
+        border-radius: 4px;
     }
     
 
