@@ -731,10 +731,16 @@ input.search-field, input[type="submit"], textarea, input {
     border-width: 1px;
     margin-bottom: .1rem;
     color: blue;
+	max-width: 100%;
 }
 
 input[type="submit"] {
     color: #333333;
+}
+
+input.search-submit {
+    padding: 0.2em 0.8em;
+    margin: 0.2em auto;
 }
 
 form label {
